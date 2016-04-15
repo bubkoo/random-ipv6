@@ -1,6 +1,6 @@
 {
   "name": "random-ipv6",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Generate a random ipv6 address.",
   "main": "index.js",
   "scripts": {
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bubkoo/random-ipv6.git"
+    "url": "git+https://github.com/mock-end/random-ipv6.git"
   },
   "bugs": {
-    "url": "https://github.com/bubkoo/random-ipv6/issues"
+    "url": "https://github.com/mock-end/random-ipv6/issues"
   },
-  "homepage": "https://github.com/bubkoo/random-ipv6#readme",
+  "homepage": "https://github.com/mock-end/random-ipv6#readme",
   "devDependencies": {
     "jshint": "^2.9.1",
     "chai": "^3.5.0",
@@ -46,6 +46,6 @@
   },
   "dependencies": {
     "pad-left": "^2.0.3",
-    "random-natural": "file:///Users/Johnny/Documents/github.bubkoo/random-natural"
+    "random-natural": "^1.0.0"
   }
 }
