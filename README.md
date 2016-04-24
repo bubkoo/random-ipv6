@@ -60,7 +60,7 @@ randomIpv6('{token}:0:0:0:0:1:0:0', {
 
 **Note**:
 
-- `schema` - the ipv4 schema, default `'{token1}:{token2}:{token3}:{token4}:{token5}:{token6}:{token7}:{token8}'`.
+- `schema` - the ipv6 schema, default `'{token1}:{token2}:{token3}:{token4}:{token5}:{token6}:{token7}:{token8}'`.
 - `options` - options for every **token**, each token has `min` and `max` option, which both are from `0` to `65535`.
 - `options.padded` - pad prefix `0` with part which's length less than `4`.
 - `options.compressed` - compress the ipv6.
