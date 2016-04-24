@@ -1,7 +1,6 @@
 # random-ipv6
 
-> Generate a random ipv6 address.
-
+> Return a random ipv6 address.
 
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/mock-end/random-ipv6/blob/master/LICENSE)
 
@@ -22,6 +21,11 @@ $ npm install --save random-ipv6
 
 ```js
 var randomIpv6 = require('random-ipv6');
+
+// API
+// - randomIpv6();
+// - randomIpv6(schema);
+// - randomIpv6(schema, options);
 
 randomIpv6();
 // => 2c56:9a76:aee6:3552:855a:f757:3611:255a
@@ -54,44 +58,24 @@ randomIpv6('{ token }:0:0:0:0:1:0:0', {
 
 ```
 
-## API
+**Note**:
 
-### randomIpv6(schema, [options])
+- `schema` - the ipv4 schema, default `'{ token1 }:{ token2 }:{ token3 }:{ token4 }:{ token5 }:{ token6 }:{ token7 }:{ token8 }'`.
+- `options` - options for every **token**, each token has `min` and `max` option, which both are from `0` to `65535`.
+- `options.padded` - pad prefix `0` with part which's length less than `4`.
+- `options.compressed` - compress the ipv6.
 
-`schema` - the ipv4 schema, default `'{ token1 }:{ token2 }:{ token3 }:{ token4 }:{ token5 }:{ token6 }:{ token7 }:{ token8 }'`.
-
-`options` - options for every **token**, each token has `min` and `max` option, which both are from `0` to `65535`.
-
-`options.padded` - pad prefix `0` with part which's length less than `4`.
-
-`options.compressed` - compress the ipv6.
 
 ## Related
 
-
-
-- [random-integral](https://github.com/mock-end/random-integral) - Generate a random integer.
-- [random-natural](https://github.com/mock-end/random-natural) - Generate a random natural number.
-- [random-decimal](https://github.com/mock-end/random-decimal) - Generate a random decimal.
-- [random-index](https://github.com/mock-end/random-index) - Generate a random array-like index.
-- [random-hexadecimal](https://github.com/mock-end/random-hexadecimal) - Generate a random hexadecimal number.
-- [random-octal](https://github.com/mock-end/random-octal) - Generate a random octal.
-- [random-unicode](https://github.com/mock-end/random-unicode) - Generate a random unicode.
-- [random-bool](https://github.com/mock-end/random-bool) - Generate a random boolean (true/false).
-- [random-char](https://github.com/mock-end/random-char) - Generate a random char.
-- [random-lorem](https://github.com/mock-end/random-lorem) - Generate a random world.
-- [random-title](https://github.com/mock-end/random-title) - Generate a random title.
-- [random-sentence](https://github.com/mock-end/random-sentence) - Generate a random sentence.
-- [random-paragraph](https://github.com/mock-end/random-paragraph) - Generate a random paragraph.
-- [random-tld](https://github.com/mock-end/random-tld) - Return a random tld.
-- [random-domains](https://github.com/mock-end/random-domains) - Generate a random domain name.
-- [random-uri](https://github.com/mock-end/random-uri.git) - Generate a random url.
-- [random-email](https://github.com/mock-end/random-email) - Generate a random email.
-- [random-lang](https://github.com/mock-end/random-lang) - Return a random language name.
-- [random-mobile](https://github.com/mock-end/random-mobile) - Generate a random chinese mobile phone number.
-- [random-zipcode](https://github.com/mock-end/random-zipcode) - Generate a random chinese zipcode.
-- [random-ipv4](https://github.com/mock-end/random-ipv4) - Generate a random ipv4 address.
-- [random-color](https://github.com/mock-end/random-color) - Generate a random color.
+- [random-ipv4](https://github.com/mock-end/random-ipv4) - Return a random ipv4 address.
+- [random-tld](https://github.com/mock-end/random-tld) - Return a random tld(Top Level Domain).
+- [random-domains](https://github.com/mock-end/random-domains) - Return a random domain.
+- [random-email](https://github.com/mock-end/random-email) - Return a random email.
+- [random-protocol](https://github.com/mock-end/random-protocol) - Return a random protocol.
+- [random-hashtag](https://github.com/mock-end/random-tld) - Return a random hashtag.
+- [random-uri](https://github.com/mock-end/random-uri.git) - Return a random url.
+- [random-avatar](https://github.com/mock-end/random-avatar) - Return a URL to a random avatar from Gravatar.
 
 
 ## Contributing

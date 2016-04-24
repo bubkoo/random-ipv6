@@ -1,7 +1,7 @@
 {
   "name": "random-ipv6",
-  "version": "1.0.0",
-  "description": "Generate a random ipv6 address.",
+  "version": "1.0.1",
+  "description": "Return a random ipv6 address.",
   "main": "index.js",
   "scripts": {
     "lint": "jshint index.js",
@@ -16,13 +16,14 @@
     "ipv4",
     "ipv6",
     "address",
-    "network",
-    "randomly",
+    "web",
     "random",
-    "rand",
-    "generator",
-    "generate",
-    "gen"
+    "randomly",
+    "randomize",
+    "chance",
+    "test",
+    "dice",
+    "mock"
   ],
   "license": "MIT",
   "author": {
@@ -46,6 +47,6 @@
   },
   "dependencies": {
     "pad-left": "^2.0.3",
-    "random-natural": "^1.0.0"
+    "random-natural": "^1.0.2"
   }
 }
