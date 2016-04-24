@@ -82,4 +82,4 @@ randomIpv6('{token}:0:0:0:0:1:0:0', {
 
 Pull requests and stars are highly welcome.
 
-For bugs and feature requests, please [create an issue](https://github.com/mock-end/random-ipv4/issues/new).
+For bugs and feature requests, please [create an issue](https://github.com/mock-end/random-ipv6/issues/new).
