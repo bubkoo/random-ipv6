@@ -18,17 +18,16 @@ $ npm install --save random-ipv6
 
 > For more use-cases see the [tests](https://github.com/mock-end/random-ipv4/blob/master/test/spec/index.js)
 
-
 ```js
 var randomIpv6 = require('random-ipv6');
 
 // API
-// - randomIpv6();
-// - randomIpv6(schema);
-// - randomIpv6(schema, options);
+// - randomIpv6(schema[, options]);
+
 
 randomIpv6();
 // => 2c56:9a76:aee6:3552:855a:f757:3611:255a
+
 
 randomIpv6('127:0::{token}.1', {
     token: {
@@ -37,6 +36,7 @@ randomIpv6('127:0::{token}.1', {
     }
 });
 // => 127.0.::f757.1
+
 
 randomIpv6('{token}::1', {
     padded: true,
@@ -47,6 +47,7 @@ randomIpv6('{token}::1', {
 });
 // => 0ee1::0001
 
+
 randomIpv6('{token}:0:0:0:0:1:0:0', {
     compressed: true,
     token:{
@@ -55,7 +56,6 @@ randomIpv6('{token}:0:0:0:0:1:0:0', {
     }
 });
 // => f07a::1:0:0
-
 ```
 
 **Note**:

@@ -1,6 +1,6 @@
 {
   "name": "random-ipv6",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Return a random ipv6 address.",
   "main": "index.js",
   "scripts": {
@@ -46,7 +46,8 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
+    "clamp": "^1.0.1",
     "pad-left": "^2.0.3",
-    "random-natural": "^1.0.2"
+    "random-natural": "^1.0.3"
   }
 }

@@ -1,10 +1,11 @@
 'use strict';
 
-var randomNatual = require('random-natural');
+var clamp        = require('clamp');
 var padLeft      = require('pad-left');
+var randomNatual = require('random-natural');
 
 
-var SCHEMA = '{ token1 }:{ token2 }:{ token3 }:{ token4 }:{ token5 }:{ token6 }:{ token7 }:{ token8 }';
+var SCHEMA = '{token1}:{token2}:{token3}:{token4}:{token5}:{token6}:{token7}:{token8}';
 var MAX    = 16 * 16 * 16 * 16 - 1;
 
 function genPart(options) {
@@ -14,17 +15,16 @@ function genPart(options) {
 
   if (isNaN(min) || !isFinite(min)) {
     min = 0;
-  } else {
-    min = Math.min(Math.max(min || 0, 0), MAX);
   }
 
   if (isNaN(max) || !isFinite(max)) {
     max = MAX;
-  } else {
-    max = Math.min(Math.max(max < 0 ? 0 : max, min), MAX);
   }
 
-  return randomNatual(min, max).toString(16);
+  min = clamp(min, 0, MAX);
+  max = clamp(max, 0, MAX);
+
+  return randomNatual({ min: min, max: max, insepcted: true }).toString(16);
 }
 
 function checkPart(part) {
